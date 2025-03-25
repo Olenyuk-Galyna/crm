@@ -19,11 +19,12 @@ export default function Sidebar({}: SidebarProps) {
       <div className="flex flex-col h-full overflow-y-auto bg-gray-900">
         <Image
           className="py-8 mb-11 mx-auto"
-          width={24}
+          width={120}
           height={24}
           src="/icons/logo.svg"
           alt="logo"
         />
+
         <ul className="space-y-7">
           <SidebarItem
             current={pathname === '/dashboard'}
