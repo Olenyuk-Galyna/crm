@@ -1,7 +1,10 @@
 import React from 'react';
 import Toolbar from '@/app/components/toolbar';
 import SearchInput from '@/app/components/search-input';
-import AddPromotionButton from '@/app/components/add-promotion-button';
+('use client');
+
+import React from 'react';
+import PromotionForm from '@/app/components/promotion-form';
 
 export interface PageProps {
   params: { id: string };
@@ -9,8 +12,8 @@ export interface PageProps {
 
 export default function Page({ params }: PageProps) {
   return (
-    <Toolbar action={<AddPromotionButton companyId={params.id} />}>
-      <SearchInput />
-    </Toolbar>
+    <div className="py-6 px-10">
+      <PromotionForm companyId={params.id} />
+    </div>
   );
 }
