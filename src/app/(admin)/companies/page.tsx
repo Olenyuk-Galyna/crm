@@ -16,7 +16,6 @@ export default async function Page({}: PageProps) {
   });
 
   const dehydratedState = dehydrate(queryClient);
-
   return (
     <HydrationBoundary state={dehydratedState}>
       <CompanyTable />
